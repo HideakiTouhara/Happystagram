@@ -12,6 +12,7 @@
 		0795DCE41F9C745A00AC81AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE21F9C745A00AC81AD /* Main.storyboard */; };
 		0795DCE61F9C745A00AC81AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE51F9C745A00AC81AD /* Assets.xcassets */; };
 		0795DCE91F9C745A00AC81AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE71F9C745A00AC81AD /* LaunchScreen.storyboard */; };
+		EF403DED8E4F321E9E14E08F /* Pods_Happystagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0795DCE51F9C745A00AC81AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0795DCE81F9C745A00AC81AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0795DCEA1F9C745A00AC81AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FFAB11E7B69888DB4849CA /* Pods-Happystagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.debug.xcconfig"; sourceTree = "<group>"; };
+		B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happystagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD788E138E8B31659BB4F05 /* Pods-Happystagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF403DED8E4F321E9E14E08F /* Pods_Happystagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0795DCDD1F9C745A00AC81AD /* Happystagram */,
 				0795DCDC1F9C745A00AC81AD /* Products */,
+				E04E57A2B0D62328FD830CB7 /* Pods */,
+				F182B78FD53E805CD655FAF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Happystagram;
 			sourceTree = "<group>";
 		};
+		E04E57A2B0D62328FD830CB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96FFAB11E7B69888DB4849CA /* Pods-Happystagram.debug.xcconfig */,
+				BAD788E138E8B31659BB4F05 /* Pods-Happystagram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F182B78FD53E805CD655FAF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0795DCED1F9C745A00AC81AD /* Build configuration list for PBXNativeTarget "Happystagram" */;
 			buildPhases = (
+				EAE710FBA5B7F6689049AC6A /* [CP] Check Pods Manifest.lock */,
 				0795DCD71F9C745A00AC81AD /* Sources */,
 				0795DCD81F9C745A00AC81AD /* Frameworks */,
 				0795DCD91F9C745A00AC81AD /* Resources */,
+				CC13E6C97E7B2F99963862D2 /* [CP] Embed Pods Frameworks */,
+				9B68BED21B37F5D2E5D3C3A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B68BED21B37F5D2E5D3C3A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC13E6C97E7B2F99963862D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE710FBA5B7F6689049AC6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0795DCD71F9C745A00AC81AD /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		0795DCEE1F9C745A00AC81AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96FFAB11E7B69888DB4849CA /* Pods-Happystagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QG4UUMT2SM;
@@ -272,6 +348,7 @@
 		};
 		0795DCEF1F9C745A00AC81AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD788E138E8B31659BB4F05 /* Pods-Happystagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QG4UUMT2SM;
