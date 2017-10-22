@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +26,43 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func createNewUser(_ sender: Any) {
+        
+        if emailTextField.text == nil || passwordTextField.text == nil {
+            let alertViewController = UIAlertController(title: "エラー", message: "入力欄が空の状態です。", preferredStyle: .alert)
+            alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertViewController, animated: true, completion: nil)
+        } else {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if error == nil {
+                    
+                } else {
+                    let alertViewController = UIAlertController(title: "エラー", message: error?.localizedDescription, preferredStyle: .alert)
+                    alertViewController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertViewController, animated: true, completion: nil)
+                }
+            }
+        }
     }
-    */
+    
+    @IBAction func userLogin(_ sender: Any) {
+        if emailTextField.text == nil || passwordTextField.text == nil {
+            let alertViewController = UIAlertController(title: "エラー", message: "入力欄が空の状態です。", preferredStyle: .alert)
+            alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertViewController, animated: true, completion: nil)
+        } else {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if error == nil {
+                    
+                } else {
+                    let alertViewController = UIAlertController(title: "エラー", message: error?.localizedDescription, preferredStyle: .alert)
+                    alertViewController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertViewController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    
 
 }
