@@ -12,6 +12,8 @@
 		0795DCE41F9C745A00AC81AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE21F9C745A00AC81AD /* Main.storyboard */; };
 		0795DCE61F9C745A00AC81AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE51F9C745A00AC81AD /* Assets.xcassets */; };
 		0795DCE91F9C745A00AC81AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCE71F9C745A00AC81AD /* LaunchScreen.storyboard */; };
+		0795DCF11F9C76DB00AC81AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */; };
+		0795DCF31F9C7A2500AC81AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */; };
 		EF403DED8E4F321E9E14E08F /* Pods_Happystagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		0795DCE51F9C745A00AC81AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0795DCE81F9C745A00AC81AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0795DCEA1F9C745A00AC81AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96FFAB11E7B69888DB4849CA /* Pods-Happystagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.debug.xcconfig"; sourceTree = "<group>"; };
 		B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happystagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD788E138E8B31659BB4F05 /* Pods-Happystagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				0795DCE51F9C745A00AC81AD /* Assets.xcassets */,
 				0795DCE71F9C745A00AC81AD /* LaunchScreen.storyboard */,
 				0795DCEA1F9C745A00AC81AD /* Info.plist */,
+				0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */,
+				0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */,
 			);
 			path = Happystagram;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0795DCE91F9C745A00AC81AD /* LaunchScreen.storyboard in Resources */,
+				0795DCF11F9C76DB00AC81AD /* GoogleService-Info.plist in Resources */,
 				0795DCE61F9C745A00AC81AD /* Assets.xcassets in Resources */,
 				0795DCE41F9C745A00AC81AD /* Main.storyboard in Resources */,
 			);
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0795DCF31F9C7A2500AC81AD /* LoginViewController.swift in Sources */,
 				0795DCE11F9C745A00AC81AD /* ViewController.swift in Sources */,
 				0795DCDF1F9C745A00AC81AD /* AppDelegate.swift in Sources */,
 			);
@@ -379,6 +387,7 @@
 				0795DCEF1F9C745A00AC81AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
