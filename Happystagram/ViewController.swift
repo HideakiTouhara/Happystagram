@@ -48,6 +48,49 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         <#code#>
     }
     
+    //MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            //backImage.image = pickedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - アプリケーションロジック
+    
+    func openCamera() {
+        let sourceType = UIImagePickerControllerSourceType.camera
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            present(cameraPicker, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func openPhoto() {
+        let sourceType = UIImagePickerControllerSourceType.photoLibrary
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let photoPicker = UIImagePickerController()
+            photoPicker.sourceType = sourceType
+            photoPicker.delegate = self
+            present(photoPicker, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func showCamera(_ sender: Any) {
+        openCamera()
+    }
+    
+    @IBAction func showPhotos(_ sender: Any) {
+        openPhoto()
+    }
+    
+    
+    
     
 
 

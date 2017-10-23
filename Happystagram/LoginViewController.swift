@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     // 新規登録成功
                     UserDefaults.standard.set("check", forKey: "check")
-                    dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     let alertViewController = UIAlertController(title: "エラー", message: error?.localizedDescription, preferredStyle: .alert)
                     alertViewController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
