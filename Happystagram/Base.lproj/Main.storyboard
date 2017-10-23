@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="539" id="1LX-m6-8qs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="539" id="1LX-m6-8qs">
                                         <rect key="frame" x="0.0" y="28" width="375" height="539"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1LX-m6-8qs" id="k8e-LF-2x4">
@@ -60,14 +60,68 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fotter" translatesAutoresizingMaskIntoConstraints="NO" id="CO8-9w-rOM">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7UQ-5V-v06">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Eof-eJ-pbm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elr-Mm-OvA">
+                                            <rect key="frame" x="31" y="2" width="48" height="47"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="picture"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz6-WL-XAY">
+                                            <rect key="frame" x="155" y="0.0" width="53" height="55"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="camerabutton"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGa-6T-vhS">
+                                            <rect key="frame" x="295" y="5" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="settingtab"/>
+                                            <connections>
+                                                <segue destination="u8T-3B-6YZ" kind="presentation" id="kTP-bD-175"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Happystagram" id="E0z-Ur-enu"/>
+                    <connections>
+                        <segue destination="28C-uZ-bWb" kind="presentation" id="PaG-Y6-vkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="324"/>
+            <point key="canvasLocation" x="1005.6" y="323.38830584707648"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ti-ZE-Jof">
+            <objects>
+                <viewController id="u8T-3B-6YZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h8a-Kb-RJQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wUF-gd-hcD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jxf-lH-Owe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQY-Hk-EC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tlO-Py-tBe">
@@ -90,7 +144,7 @@
         <!--Login View Controller-->
         <scene sceneID="byD-Ax-K7r">
             <objects>
-                <viewController id="28C-uZ-bWb" customClass="LoginViewController" customModule="Happystagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="28C-uZ-bWb" customClass="LoginViewController" customModule="Happystagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4fM-hw-TIS"/>
                         <viewControllerLayoutGuide type="bottom" id="Ond-ZS-WjX"/>
@@ -131,6 +185,9 @@
                                             <state key="normal" title="新規登録">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="createNewUser:" destination="28C-uZ-bWb" eventType="touchUpInside" id="C1T-Gc-AYk"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBn-71-zw7">
                                             <rect key="frame" x="207" y="387" width="84" height="30"/>
@@ -139,6 +196,9 @@
                                             <state key="normal" title="ログイン">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="userLogin:" destination="28C-uZ-bWb" eventType="touchUpInside" id="vFj-rU-uMW"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -147,6 +207,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="PFq-Wg-jO6" id="LiQ-bf-VMe"/>
+                        <outlet property="passwordTextField" destination="Tqc-cV-WrX" id="4F3-Fc-Ibp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVw-L4-q52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,5 +219,9 @@
     </scenes>
     <resources>
         <image name="blurback" width="2048" height="1362"/>
+        <image name="camerabutton" width="64" height="64"/>
+        <image name="fotter" width="615" height="410"/>
+        <image name="picture" width="64" height="64"/>
+        <image name="settingtab" width="64" height="64"/>
     </resources>
 </document>
