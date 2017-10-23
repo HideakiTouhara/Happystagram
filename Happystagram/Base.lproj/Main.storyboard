@@ -59,6 +59,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="btO-ZC-oCP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v9A-cq-b6l"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fotter" translatesAutoresizingMaskIntoConstraints="NO" id="CO8-9w-rOM">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -104,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Happystagram" id="E0z-Ur-enu"/>
                     <connections>
+                        <outlet property="tableView" destination="hsK-1L-3r9" id="ccX-9U-ds4"/>
                         <segue destination="28C-uZ-bWb" kind="presentation" id="PaG-Y6-vkw"/>
                     </connections>
                 </viewController>

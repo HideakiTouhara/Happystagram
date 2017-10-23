@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+
+    let refreshControl = UIRefreshControl()
+    var items = [NSDictionary]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "login")
             self.present(loginViewController!, animated: true, completion: nil)
         }
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +86,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             photoPicker.delegate = self
             present(photoPicker, animated: true, completion: nil)
         }
+    }
+    
+    func refresh() {
+        
     }
     
     // MARK: - IBAction
