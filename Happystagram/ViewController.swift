@@ -48,6 +48,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.selectionStyle = .none
+        
+        let profileImageView = cell.viewWithTag(1) as! UIImageView
+        
+        let usernameLabel = cell.viewWithTag(2) as! UILabel
+        
+        let postedImageView = cell.viewWithTag(3) as! UIImageView
+        
+        let commentTextView = cell.viewWithTag(4) as! UITextView
+        
+        
         return cell
     }
     
@@ -90,6 +100,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func refresh() {
         
+    }
+    
+    func loadAllData() {
+        // https://happystagram-75abf.firebaseio.com/
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let firebase = Database.database().reference(fromURL: "https://happystagram-75abf.firebaseio.com/").child("Posts")
+        firebase.queryLimited(toLast: 10).observe(.value) { (snapshot, error) in
+            var tempItems = [NSDictionary]()
+            for item in(snapshot.children) {
+                let child = item as! DataSnapshot
+                let dict = child.value
+                tempItems.append(dict as! NSDictionary)
+            }
+            
+            self.items = tempItems
+            self.items = self.items.reversed()
+//            NSLog("アイテム", self.items)
+            self.tableView.reloadData()
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+        }
     }
     
     // MARK: - IBAction
