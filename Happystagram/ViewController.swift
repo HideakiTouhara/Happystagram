@@ -59,6 +59,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let decodedDate = NSData(base64Encoded: decodeData as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
         let decodedImage = UIImage(data: decodedDate! as Data)
         profileImageView.image = decodedImage
+        profileImageView.layer.cornerRadius = 8.0
+        profileImageView.clipsToBounds = true
         
         // ユーザー名
         let usernameLabel = cell.viewWithTag(2) as! UILabel
@@ -83,7 +85,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - TableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        // 選択されたとき
     }
     
     //MARK: - UIImagePickerControllerDelegate
