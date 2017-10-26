@@ -49,13 +49,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.selectionStyle = .none
         
+        let dict = items[(indexPath as NSIndexPath).row]
+        
+        
+        // プロフィール画像
         let profileImageView = cell.viewWithTag(1) as! UIImageView
+        // デコードしたデータをUIImage型に変換してImageViewに反映
+        let decodeData = (base64encoded:dict["profileImage"])
+        let decodedDate = NSData(base64Encoded: decodeData as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+        let decodedImage = UIImage(data: decodedDate! as Data)
+        profileImageView.image = decodedImage
         
+        // ユーザー名
         let usernameLabel = cell.viewWithTag(2) as! UILabel
+        usernameLabel.text = dict["username"] as? String
         
+        // 投稿画像
         let postedImageView = cell.viewWithTag(3) as! UIImageView
+        // デコードしたデータをUIImage型に変換してImageViewに反映
+        let decodeData2 = (base64encoded:dict["postedImage"])
+        let decodedDate2 = NSData(base64Encoded: decodeData2 as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+        let decodedImage2 = UIImage(data: decodedDate2! as Data)
+        postedImageView.image = decodedImage2
         
+        // コメント
         let commentTextView = cell.viewWithTag(4) as! UITextView
+        commentTextView.text = dict["comment"] as? String
         
         
         return cell
