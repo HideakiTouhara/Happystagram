@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -75,6 +76,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     
     @IBAction func logout(_ sender: UIButton) {
+        try! Auth.auth().signOut()
     }
     
     @IBAction func back(_ sender: UIButton) {
