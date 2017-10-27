@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="700"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1LX-m6-8qs" id="k8e-LF-2x4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="699.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cND-l3-9AM">
@@ -157,6 +157,12 @@
                     <navigationItem key="navigationItem" id="exw-jC-kZD">
                         <barButtonItem key="rightBarButtonItem" title="投稿" id="rmG-Su-dVF"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commentTextView" destination="iT9-b3-CQH" id="kTw-y2-0kL"/>
+                        <outlet property="imageView" destination="YqZ-w5-RJe" id="CD1-EL-I9Z"/>
+                        <outlet property="myProfileImageView" destination="JLy-48-HNu" id="HmB-SQ-XEz"/>
+                        <outlet property="myProfileLabel" destination="LTk-Lt-EFi" id="8zq-ne-BKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8c-jh-X3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
