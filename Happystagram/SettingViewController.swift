@@ -84,6 +84,8 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     @IBAction func logout(_ sender: UIButton) {
         try! Auth.auth().signOut()
+        UserDefaults.standard.removeObject(forKey: "check")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func back(_ sender: UIButton) {
