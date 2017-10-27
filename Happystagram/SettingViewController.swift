@@ -34,7 +34,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         picker.dismiss(animated: true, completion: nil)
     }
     
-    // アプリケーションロジック
+    // MARK: - アプリケーションロジック
     
     func openCamera() {
         let sourceType = UIImagePickerControllerSourceType.camera
@@ -54,6 +54,12 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             photoPicker.sourceType = sourceType
             photoPicker.delegate = self
             present(photoPicker, animated: true, completion: nil)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if usernameTextField.isFirstResponder {
+            usernameTextField.resignFirstResponder()
         }
     }
     
@@ -84,6 +90,17 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     }
     
     @IBAction func done(_ sender: UIButton) {
+        var data: NSData = NSData()
+        if let image = profileImageView.image {
+            data = UIImageJPEGRepresentation(image, 0.1)! as NSData
+        }
+        let userName = usernameTextField.text
+        let base64String = data.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters) as String
+        
+        // アプリ内へ保存する
+        UserDefaults.standard.set(base64String, forKey: "profileImage")
+        UserDefaults.standard.set(userName, forKey: "userName")
+        dismiss(animated: true, completion: nil)
     }
 
 
