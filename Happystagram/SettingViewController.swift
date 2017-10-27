@@ -29,7 +29,8 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     //MARK: - UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //backImage.image = pickedImage
+            profileImageView.contentMode = .scaleToFill
+            profileImageView.image = pickedImage
         }
         picker.dismiss(animated: true, completion: nil)
     }
