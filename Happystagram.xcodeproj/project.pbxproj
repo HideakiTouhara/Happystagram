@@ -15,6 +15,7 @@
 		0795DCF11F9C76DB00AC81AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */; };
 		0795DCF31F9C7A2500AC81AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */; };
 		07E506251FA2146300A589C6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E506241FA2146300A589C6 /* SettingViewController.swift */; };
+		07E506271FA33C4800A589C6 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E506261FA33C4800A589C6 /* EditViewController.swift */; };
 		EF403DED8E4F321E9E14E08F /* Pods_Happystagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07E506241FA2146300A589C6 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		07E506261FA33C4800A589C6 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		96FFAB11E7B69888DB4849CA /* Pods-Happystagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.debug.xcconfig"; sourceTree = "<group>"; };
 		B934DF9DB736CFA9E9AF07AD /* Pods_Happystagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happystagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD788E138E8B31659BB4F05 /* Pods-Happystagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happystagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happystagram/Pods-Happystagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				0795DCF01F9C76DB00AC81AD /* GoogleService-Info.plist */,
 				0795DCF21F9C7A2500AC81AD /* LoginViewController.swift */,
 				07E506241FA2146300A589C6 /* SettingViewController.swift */,
+				07E506261FA33C4800A589C6 /* EditViewController.swift */,
 			);
 			path = Happystagram;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E506271FA33C4800A589C6 /* EditViewController.swift in Sources */,
 				0795DCF31F9C7A2500AC81AD /* LoginViewController.swift in Sources */,
 				0795DCE11F9C745A00AC81AD /* ViewController.swift in Sources */,
 				0795DCDF1F9C745A00AC81AD /* AppDelegate.swift in Sources */,
