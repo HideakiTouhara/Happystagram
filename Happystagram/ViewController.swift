@@ -33,6 +33,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
+        
+        items = [NSDictionary]()
+        loadAllData()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -159,6 +164,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func refresh() {
+        
+        items = [NSDictionary]()
+        loadAllData()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
         
     }
     
