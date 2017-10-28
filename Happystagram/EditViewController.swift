@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class EditViewController: UIViewController, UITextViewDelegate {
     
@@ -43,4 +44,42 @@ class EditViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - アプリケーションロジック
+    func postAll() {
+        let databaseRef = Database.database().reference()
+        
+        // ユーザー名
+        let username = myProfileLabel.text
+        // コメント
+        let comment = commentTextView.text
+        // 投稿画像
+        var data = NSData()
+        if let image = imageView.image {
+            data = UIImageJPEGRepresentation(image, 0.1)! as NSData
+        }
+        let base64String = data.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters) as String
+        
+        // profile画像
+        var data2 = NSData()
+        if let image2 = imageView.image {
+            data2 = UIImageJPEGRepresentation(image2, 0.1)! as NSData
+        }
+        let base64String2 = data2.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters) as String
+        
+        // サーバーへ送る用Dictionary
+        let user: NSDictionary = ["username":username, "comment":message, "profileImage":base64String, "profileImage2":base64String2]
+        databaseRef.child("Posts").childByAutoId().setValue(user)
+        
+        // 戻る
+        self.navigationController?.popToRootViewController(animated: ture)
+
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func post(_ sender: UIBarButtonItem) {
+        postAll()
+    }
+    
 }

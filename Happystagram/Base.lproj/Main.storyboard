@@ -155,7 +155,11 @@
                         <color key="backgroundColor" red="0.97638529539108276" green="0.97652524709701538" blue="0.97635465860366821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="exw-jC-kZD">
-                        <barButtonItem key="rightBarButtonItem" title="投稿" id="rmG-Su-dVF"/>
+                        <barButtonItem key="rightBarButtonItem" title="投稿" id="rmG-Su-dVF">
+                            <connections>
+                                <action selector="post:" destination="ZTv-IG-hHv" id="Z58-Ek-q5n"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="commentTextView" destination="iT9-b3-CQH" id="kTw-y2-0kL"/>

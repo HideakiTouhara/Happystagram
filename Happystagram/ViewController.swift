@@ -69,7 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // 投稿画像
         let postedImageView = cell.viewWithTag(3) as! UIImageView
         // デコードしたデータをUIImage型に変換してImageViewに反映
-        let decodeData2 = (base64encoded:dict["postedImage"])
+        let decodeData2 = (base64encoded:dict["postedImage2"])
         let decodedDate2 = NSData(base64Encoded: decodeData2 as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
         let decodedImage2 = UIImage(data: decodedDate2! as Data)
         postedImageView.image = decodedImage2
