@@ -337,6 +337,9 @@
                                 <rect key="frame" x="137" y="547" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="shareTwitter"/>
+                                <connections>
+                                    <action selector="shareTwitter:" destination="rVH-pU-Aql" eventType="touchUpInside" id="OCK-L6-0ra"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

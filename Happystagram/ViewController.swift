@@ -16,6 +16,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let refreshControl = UIRefreshControl()
     var items = [NSDictionary]()
     var passImage = UIImage()
+    
+    var nowtableViewImage = UIImage()
+    var nowtableViewUserName = String()
+    var nowtableViewUserImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +109,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if segue.identifier == "next" {
             let editVC = segue.destination as! EditViewController
             editVC.willEditImage = passImage
+        }
+        
+        if segue.identifier == "sns" {
+            let SNSVC = segue.destination as! SNSViewController
+//            SNSVC.detailImage =
+//            SNSVC.detailProfileImage =
+//            SNSVC.detailUserName =
         }
     }
     
