@@ -52,7 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
