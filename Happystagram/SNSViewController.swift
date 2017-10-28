@@ -11,9 +11,12 @@ import Social
 
 class SNSViewController: UIViewController {
     
+
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     
     // 投稿されている画像
     var detailImage = UIImage()

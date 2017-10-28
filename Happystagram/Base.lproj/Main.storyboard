@@ -280,7 +280,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="profileImageView" destination="7A2-TH-sha" id="Ppd-r1-spw"/>
+                        <outlet property="profileImageView" destination="Syc-xo-hVk" id="tQG-kS-GLF"/>
                         <outlet property="usernameTextField" destination="XhO-Ud-igU" id="cVa-6I-Um2"/>
                     </connections>
                 </viewController>
@@ -348,7 +348,7 @@
                     <connections>
                         <outlet property="imageView" destination="L1Y-qH-evD" id="TEC-a4-Daa"/>
                         <outlet property="label" destination="gj5-fP-53H" id="PVh-9F-WPz"/>
-                        <outlet property="profileImageView" destination="bx4-z1-lCL" id="D7m-1s-HyJ"/>
+                        <outlet property="profileImageView" destination="bx4-z1-lCL" id="JVe-Ge-IKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPE-He-bfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,7 +358,7 @@
         <!--Login View Controller-->
         <scene sceneID="byD-Ax-K7r">
             <objects>
-                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="28C-uZ-bWb" customClass="LoginViewController" customModule="Happystagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="login" storyboardIdentifier="login" id="28C-uZ-bWb" customClass="LoginViewController" customModule="Happystagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4fM-hw-TIS"/>
                         <viewControllerLayoutGuide type="bottom" id="Ond-ZS-WjX"/>
