@@ -62,13 +62,13 @@ class EditViewController: UIViewController, UITextViewDelegate {
         
         // profile画像
         var data2 = NSData()
-        if let image2 = imageView.image {
+        if let image2 = myProfileImageView.image {
             data2 = UIImageJPEGRepresentation(image2, 0.1)! as NSData
         }
         let base64String2 = data2.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters) as String
         
         // サーバーへ送る用Dictionary
-        let user: NSDictionary = ["username":username, "comment":message, "profileImage":base64String, "profileImage2":base64String2]
+        let user: NSDictionary = ["username":username, "comment":message, "postImage":base64String, "profileImage":base64String2]
         databaseRef.child("Posts").childByAutoId().setValue(user)
         
         // 戻る

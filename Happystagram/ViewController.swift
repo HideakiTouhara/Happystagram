@@ -90,7 +90,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - TableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 選択されたとき
+        let dict = items[(indexPath as NSIndexPath).row]
+        
+        let decodeData = (base64Encoded:dict["profileImage"])
+        let decodedData = NSData(base64Encoded: decodeData as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+        let decodedImage = UIImage(data: decodedData! as Data)
+        nowtableViewUserImage = decodedImage!
+        
+        nowtableViewUserName = (dict["username"] as? String)!
+        
+        let decodeData2 = (base64Encoded:dict["postImage"])
+        let decodedData2 = NSData(base64Encoded: decodeData2 as! String, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+        let decodedImage2 = UIImage(data: decodedData2! as Data)
+        nowtableViewImage = decodedImage2!
+        
+        performSegue(withIdentifier: "sns", sender: nil)
+
+        
     }
     
     // MARK: - UIImagePickerControllerDelegate
@@ -113,9 +129,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if segue.identifier == "sns" {
             let SNSVC = segue.destination as! SNSViewController
-//            SNSVC.detailImage =
-//            SNSVC.detailProfileImage =
-//            SNSVC.detailUserName =
+            SNSVC.detailImage = nowtableViewImage
+            SNSVC.detailProfileImage = nowtableViewUserImage
+            SNSVC.detailUserName = nowtableViewUserName
         }
     }
     
