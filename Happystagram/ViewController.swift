@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     let refreshControl = UIRefreshControl()
     var items = [NSDictionary]()
+    var passImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,12 +89,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // 選択されたとき
     }
     
-    //MARK: - UIImagePickerControllerDelegate
+    // MARK: - UIImagePickerControllerDelegate
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //backImage.image = pickedImage
+            passImage = pickedImage
+            performSegue(withIdentifier: "next", sender: nil)
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next" {
+            let editVC = segue.destination as! EditViewController
+            editVC.willEditImage = passImage
+        }
     }
     
     // MARK: - アプリケーションロジック

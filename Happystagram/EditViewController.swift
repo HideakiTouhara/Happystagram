@@ -52,7 +52,7 @@ class EditViewController: UIViewController, UITextViewDelegate {
         // ユーザー名
         let username = myProfileLabel.text
         // コメント
-        let comment = commentTextView.text
+        let message = commentTextView.text
         // 投稿画像
         var data = NSData()
         if let image = imageView.image {
@@ -72,7 +72,7 @@ class EditViewController: UIViewController, UITextViewDelegate {
         databaseRef.child("Posts").childByAutoId().setValue(user)
         
         // 戻る
-        self.navigationController?.popToRootViewController(animated: ture)
+        self.navigationController?.popToRootViewController(animated: true)
 
     }
     

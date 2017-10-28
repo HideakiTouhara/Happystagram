@@ -110,7 +110,7 @@
                     <connections>
                         <outlet property="tableView" destination="hsK-1L-3r9" id="ccX-9U-ds4"/>
                         <segue destination="28C-uZ-bWb" kind="presentation" id="PaG-Y6-vkw"/>
-                        <segue destination="ZTv-IG-hHv" kind="push" id="JG0-2p-qNH"/>
+                        <segue destination="ZTv-IG-hHv" kind="push" identifier="next" id="JG0-2p-qNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
